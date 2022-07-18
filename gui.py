@@ -57,6 +57,7 @@ def measurement(values,window):
     robot.readline() # need time interval for secure operation
     robot.write(b'MOT\r') # remote control mode
     robot.readline()
+    #robot.write(b'SPD S10 A10 B1\r') # set speed
     robot.write(b'SPD S10 A10 B1\r') # set speed
     robot.readline()
     ORD = b'MOV X'+str(POS_STR[0]).encode()+b' Y'+str(POS_STR[1]).encode()+b' S50 &AFW\r'
